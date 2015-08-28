@@ -1,0 +1,4 @@
+The program 'opengl-snake' is a clone of a snake game I wrote in C and was renered using the SDL2 renderer  This implementation of snake still uses SDL2 for windowing and input handling, but uses OpenGL for graphics rendering as its name implies.  Makefile is for UNIX-like systems while Makefile.win is for use with Windows systems using MinGW.
+
+How to play:
+The snake moves on its own, but the direction keys can be used to make it change direction.  The snake grows longer as it eats more fruit, and you lose if the head of the snake goes past the bounds of the screen or hits any part of the snake.  As for win conditions, there are none.
