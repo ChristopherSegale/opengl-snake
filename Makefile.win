@@ -1,11 +1,14 @@
+CC=i686-w64-mingw32-gcc
+SDL2_LOCATION=/mingw32
 BIN=snake
-LDFLAGS=$(shell sdl2-config --libs) -lGL
-CFLAGS=$(shell sdl2-config --cflags) -std=c99 -pedantic
+LDFLAGS=-L$(SDL2_LOCATION)/lib -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 -lglu32 -mwindows
+CFLAGS=-std=c99 -pedantic -I$(SDL2_LOCATION)/include -Dmain=SDL_main
 RM=rm -f
 
 all: $(BIN)
 
 $(BIN):
+	$(CC) $(CFLAGS) $(BIN).c -o $(BIN) $(LDFLAGS)
 
 clean:
 	$(RM) $(BIN).exe

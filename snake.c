@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <GL/gl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         SDL_Quit();
         return -1;
     }
-    SDL_Window *win = SDL_CreateWindow("snake", 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL);
+    SDL_Window *win = SDL_CreateWindow("snake", 50, 50, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL);
     if (!win) {
         fprintf(stderr, "Unable to initialize window: %s\n", SDL_GetError());
         SDL_Quit();
